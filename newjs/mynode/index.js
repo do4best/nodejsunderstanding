@@ -8,11 +8,11 @@ const __fileName = url.fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__fileName)
 
 const server = http.createServer(async (req, res) => {
-  try {
-    if (req.method === 'GET') {
+  try {//this start of try
+    if (req.method === 'GET') { // if request is "GET"
       let filepath = "";
       if (req.url === '/') {
-        filepath = path.join(__dirname, 'public', 'index.html')
+        filepath = path.join(__dirname, 'public', 'home.html')
       } else if (req.url === '/about') {
         filepath = path.join(__dirname, 'public', 'about.html')
       } else {
@@ -23,7 +23,8 @@ const server = http.createServer(async (req, res) => {
 
       const data = await fs.readFile(filepath)
       res.setHeader('Content-Type', 'text/html')
-      res.end(data)
+      res.write(data)
+      res.end()
       console.log('find it', filepath)
     } else {
       res.writeHead(405, { 'content-type': 'text/plain' })
