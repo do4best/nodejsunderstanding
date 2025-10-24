@@ -1,5 +1,6 @@
-var word="find";
-
-{
-    console.log(window.word)
+let count = 10;
+let i=0;
+for(; i<count;){
+    console.log(i)
+    i++
 }
