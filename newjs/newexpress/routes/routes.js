@@ -31,13 +31,14 @@ let users = [
     }})
     
 
- route.get('/:id',(req,res)=>{
+ route.get('/:id',(req,res,next)=>{
     let id = parseInt(req.params.id,10)
     if (Number.isNaN(id)) return res.status(400).json({ error: 'Invalid id' })
     const post = users.find((post)=>post.id === id)
 
     if(!post){
-        res.status(404).json({error:`Sorry ${post} is not found`})
+        let error = new Error(`Sorry ${id} is not found`)
+       return  next(error)
     }else{
        return  res.status(200).json(post)
     }

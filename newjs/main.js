@@ -1,6 +1,5 @@
-let count = 10;
-let i=0;
-for(; i<count;){
-    console.log(i)
-    i++
-}
+let str1 = new String("hello")
+let str2 = str1;
+str2=new Number(55)
+
+console.log( typeof str2)
