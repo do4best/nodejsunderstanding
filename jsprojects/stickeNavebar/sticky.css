@@ -1,0 +1,50 @@
+body{
+    margin:0;
+}
+.top-container{
+    background-image: url("https://plus.unsplash.com/premium_photo-1761953111449-baa0a316ab45?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=806");
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.top-container h1{
+    color: white;
+    font-size: 50px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 2px;
+}
+.text{
+    margin: 50px 5%;
+    font-family: sans-serif;
+}
+.navebar{
+    display: flex;
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: background-color 0.4s;
+}
+.navebar ul{
+    display: flex;
+    list-style-type: none;
+}
+.navebar ul li a{
+    text-decoration: none;
+    margin: 0 10px;
+    color: black;
+    font-family: cursive;
+}
+.navebar ul li a:hover{
+    color: red;
+}
+.navebar.active{
+    background-color: black;
+}
+.navebar.active ul li a{
+    color: white;
+}
