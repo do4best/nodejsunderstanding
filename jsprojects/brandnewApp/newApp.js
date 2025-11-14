@@ -11,6 +11,9 @@ function createElement(id,content){
         }
     })
 }
+function deleteNote(id,element){
+    
+}
 function addNote(){
     const noteObj={
         id:Math.floor(Math.random()*10000),
