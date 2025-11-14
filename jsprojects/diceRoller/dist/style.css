@@ -25,7 +25,7 @@ h1 {
     transform: rotateY(0deg);
   }
   100% {
-    transform: rotateX(720deg) rotateX(720deg);
+    transform: rotateX(720deg) rotateY(720deg);
   }
 }
 button {
